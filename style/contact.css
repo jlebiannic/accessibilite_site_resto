@@ -1,0 +1,163 @@
+.contact {
+  width: var(--width);
+  align-items: center;
+  min-height: 70vh;
+  margin-top: 100px;
+}
+
+.primary {
+  color: var(--primary);
+}
+
+.card {
+  background: var(--light);
+  box-shadow: 2px 2px 20px var(--shadow);
+  margin-bottom: 50px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.zoomed .card.flex-between {
+  flex-direction: column;
+}
+
+.zoomed .form,
+.zoomed .text {
+  width: 95%;
+  clip-path: none;
+}
+
+.form {
+  padding: 30px;
+  width: 60%;
+}
+
+.text {
+  width: 40%;
+  min-height: 74vh;
+  font-size: 1.5em;
+  padding: 40px;
+  height: 100%;
+  background-color: var(--dark);
+  color: var(--light);
+  clip-path: polygon(0 0, 100% 0%, 84% 100%, 0% 100%);
+}
+
+.text > div {
+  margin: 40px 30px 40px 0;
+}
+
+.text .form_control {
+  width: 80%;
+  margin: auto;
+}
+
+.field input,
+.field textarea,
+.field button,
+.field-date input,
+.field select {
+  width: 100%;
+  margin-bottom: 30px;
+  height: 3em;
+  border-radius: 10px;
+  border: solid 2px var(--dark);
+  font-family: var(--main-font);
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+.field-date {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.field {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.field label,
+.field-date label {
+  margin: auto;
+  flex: 1;
+}
+
+.field input,
+.field textarea,
+.field button {
+  margin: auto;
+  flex: 2;
+}
+
+.field-date input {
+  margin: auto;
+  flex: 1;
+}
+.form_control input {
+  grid-column: 2/3;
+}
+
+.form_control label {
+  grid-column: 1/2;
+}
+
+.form_control textarea,
+button {
+  grid-column: 2/3;
+  height: 10em;
+}
+
+.form_control input:focus,
+select:focus,
+.form_control textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.field textarea {
+  height: 10em;
+}
+
+.two_controls > * {
+  width: 48%;
+}
+
+.field button {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+input:invalid,
+textarea:invalid {
+  border-color: var(--secondary);
+}
+
+.form_control button:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.send:focus {
+  outline-color: var(--primary);
+  font-weight: bold;
+}
+
+#progress {
+  display: none;
+  width: 90%;
+  margin: 40px auto;
+  border-radius: 50px;
+  height: 50px;
+  overflow: hidden;
+  border: solid black;
+}
+
+#progress #color {
+  height: 100%;
+  background: red;
+  transition: all 600ms linear;
+  width: 0%;
+}

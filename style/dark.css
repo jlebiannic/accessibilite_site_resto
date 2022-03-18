@@ -1,0 +1,42 @@
+:root {
+    --primary: #60d394ff;
+    --primary-transparent: rgba(105, 255, 166, 0.55);
+    --secondary: #de8f6eff;
+    --light: #183642ff;
+    --light-darker: rgb(18, 37, 45);
+    --dark-transparent: #F3F3F3;
+    --dark: #fff;
+    --shadow: #13252c;
+}
+
+nav {
+    border-bottom: solid 2px var(--primary-transparent);
+}
+
+.dark {
+    background-color: var(--primary) !important;
+    color: var(--light) !important;
+}
+
+.dark .primary {
+    color: var(--secondary) !important;
+}
+
+input, textarea {
+    background-color: var(--light-darker);
+    color: var(--dark);
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--dark-transparent);
+}
+
+button {
+    background-color: var(--primary) !important;
+    color: var(--light) !important;
+    border-color: var(--primary) !important;
+}
+
+button:focus {
+    outline-color: white;
+}

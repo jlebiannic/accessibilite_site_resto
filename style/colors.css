@@ -1,0 +1,19 @@
+:root {
+  --primary: #60d394ff;
+  --primary-transparent: rgba(105, 255, 166, 0.55);
+  --secondary: #de8f6eff;
+  --dark: #183642ff;
+  --dark-transparent: rgba(24, 54, 66, 0.31);
+  --light: #fff;
+  --light-darker: #f3f3f3;
+  --shadow: rgba(128, 128, 128, 0.39);
+}
+
+.dark {
+  background-color: var(--dark) !important;
+  color: var(--light) !important;
+}
+
+.dark .primary {
+  color: var(--primary) !important;
+}

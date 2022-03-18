@@ -1,0 +1,143 @@
+/****** Header ***************************/
+
+header {
+  width: 100%;
+  height: 60vh;
+  background-image: url("https://ams3.digitaloceanspaces.com/tmi-images/big_bang_749/gallery/yvrHPisfLPkJQkvSr.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 60% 100%, 0 85%);
+}
+
+.title-container {
+  background-color: var(--dark);
+  color: var(--light);
+  text-align: center;
+  min-width: 40%;
+  padding: 40px 30px;
+  border-radius: 20px;
+  font-size: 2em;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+/***** Gallery ******************/
+
+.presentation {
+  font-size: 1.3em;
+  margin: 50px auto;
+}
+
+.presentation h2 {
+  margin-bottom: 50px;
+}
+
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 100px 0;
+}
+
+.gallery img {
+  width: 22%;
+  margin-bottom: 50px;
+}
+
+/**** Accueil : menu *********/
+
+main,
+.main {
+  margin: 70px auto;
+  min-height: 55vh;
+}
+
+.card {
+  background: var(--light);
+  box-shadow: 2px 2px 20px var(--shadow);
+  margin-bottom: 50px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
+.card:nth-child(2n) .img {
+  clip-path: polygon(0 0, 100% 0%, 84% 100%, 0% 100%);
+}
+
+.card h2 {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--primary);
+}
+
+.card h3 {
+  color: var(--secondary);
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-top: 50px;
+}
+
+.card .img {
+  overflow: hidden;
+  height: 100%;
+  width: 50%;
+  clip-path: polygon(16% 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.card img {
+  height: 100%;
+}
+
+.card .text {
+  width: 70%;
+  padding: 30px 70px 30px 70px;
+}
+
+.menu_item {
+  list-style: none;
+  font-size: 1.2em;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  margin-bottom: 1em;
+}
+
+.li {
+  padding-left: 40px;
+}
+
+h3 {
+  margin-bottom: 30px;
+}
+
+.menu_item strong {
+  grid-area: 1 / 1 / 2 / 2;
+  margin-bottom: 0;
+}
+
+.menu_item span:first-child {
+  grid-area: 2 / 1 / 3 / 2;
+  font-size: 1rem;
+}
+
+.menu_item span:last-child {
+  grid-area: 1 / 2 / 3 / 3;
+}
+
+#bieres .li,
+#bieres li {
+  font-size: 1.3em;
+  list-style: none;
+}
+
+#bieres i {
+  margin-right: 10px;
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link href="./style/colors.css" rel="stylesheet" />
+    <link href="./style/style.css" rel="stylesheet" type="text/css" />
+    <link href="./style/contact.css" rel="stylesheet" type="text/css" />
+    <link href="./style/access.css" rel="stylesheet" type="text/css" />
+
+    <title>La ch'tite cuisine : Réservation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <nav class="nav">
+      <ul class="ul-evit">
+        <li>
+          <a class="my-sr-only" href="#form">Accés direct au formulaire</a>
+        </li>
+      </ul>
+      <ul class="nav-list centered">
+        <li>
+          <a class="nav-item" href="index.html">Accueil</a>
+        </li>
+        <li>
+          <div class="nav-item">Accessibilité</div>
+        </li>
+        <li>
+          <a class="nav-item" href="./contact_bad.html">Réserver</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="contact card centered flex-between">
+      <div class="text">
+        <h2>Demande de Réservation</h2>
+        <div>
+          <span class="primary"> Réservez en ligne</span> pour gagner du temps
+          et vous assurer de pouvoir déguster nos bons petits plats.
+        </div>
+        <div>
+          Pour toute réservation de plus de 10 personnes, merci de téléphoner au
+          préalable.
+        </div>
+        <div>A bientôt à la <span class="primary">Ch'tite Cuisine</span></div>
+      </div>
+      <form class="form" id="form">
+        <div class="field">
+          <label for="name">Nom<sup aria-hidden="true">*</sup></label>
+          <input
+            id="name"
+            type="text"
+            placeholder="John Doe"
+            aria-placeholder="Exemple: John Doe"
+            autocomplete="name"
+            aria-required="true"
+          />
+        </div>
+        <div class="error hidden" id="n_error_req">
+          Erreur : Le champs nom est obligatoire
+        </div>
+
+        <div class="error hidden" id="n_error">
+          Erreur : Veuillez entrer un nom valide
+        </div>
+        <div class="field">
+          <label for="nbPersonnes" aria-label="Nombre de personnes"
+            >Nb Personnes</label
+          >
+          <input id="nbPersonnes" placeholder="Nb personnes" />
+        </div>
+
+        <fieldset>
+          <legend>Votre réservation</legend>
+          <div class="field-date">
+            <label for="date">Date</label>
+            <input id="date" type="date" />
+          </div>
+          <div class="field">
+            <label for="select">Heure</label>
+            <select id="select"></select>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <textarea
+            aria-label="Informations Complémentaires"
+            placeholder="Informations Complémentaires"
+          ></textarea>
+        </div>
+        <div class="field">
+          <button id="btn" type="submit">Valider la réservation</button>
+        </div>
+        <div
+          aria-live="assertive"
+          aria-atomic="true"
+          role="progressbar"
+          id="progress"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="0"
+        >
+          <div id="color"></div>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <div class="footer-container centered flex-between">
+        <div>
+          <h3>Nous contacter</h3>
+          <ul>
+            <li>Adresse: 23 rue des Pingouins, Wissant</li>
+            <li>Téléphone: 03 21 10 10 10</li>
+            <li>Email: lachtitecuisine@gmail.com</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Retrouvez nous</h3>
+          <div class="map">
+            <iframe
+              aria-label="Carte du restaurant issue de Google Map. Le restaurant est situé 23 rue des Pingouins, à Wissant."
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2517.1697478106535!2d1.6524638159349816!3d50.883568563942205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dc24e7af4970b3%3A0x9bd65f3c4c9796fe!2s23%20Rue%20des%20Pingouins%2C%2062179%20Wissant!5e0!3m2!1sfr!2sfr!4v1632320485837!5m2!1sfr!2sfr"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+        <div>
+          <h3>Something Something</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi
+            natus laboriosam hic inventore nisi odit aut ullam eum dolorum
+            accusantium id soluta maiores expedita excepturi, minus aspernatur
+            aliquid distinctio. Praesentium!
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Javascript -->
+
+    <script>
+      const form = document.getElementById("form");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const elName = document.getElementById("name");
+        const elErrorRequire = document.getElementById("n_error_req");
+        const elErrorInvalid = document.getElementById("n_error");
+        elErrorRequire.classList.add("hidden");
+        elErrorInvalid.classList.add("hidden");
+        if (!elName.value) {
+          elName.setAttribute("aria-invalid", "true");
+          elName.setAttribute("aria-describedby", "n_error_req");
+          elErrorRequire.classList.remove("hidden");
+          elName.focus();
+        } else if (elName.value.length < 2) {
+          elName.setAttribute("aria-invalid", "true");
+          elName.setAttribute("aria-describedby", "n_error");
+          elErrorInvalid.classList.remove("hidden");
+          elName.focus();
+        } else {
+          validForm();
+        }
+      });
+
+      const select = document.getElementById("select");
+      const am = ["12h", "12h30", "13h15"];
+      const pm = ["19h", "20h"];
+
+      function createOpt(label, list) {
+        const group = document.createElement("optgroup");
+        group.label = label;
+        list.forEach((el) => {
+          const opt = document.createElement("option");
+          opt.value = el;
+          opt.textContent = el;
+          group.appendChild(opt);
+        });
+        select.appendChild(group);
+      }
+
+      createOpt("Midi", am);
+      createOpt("Soir", pm);
+
+      let width = 0;
+      function validForm() {
+        const btn = document.getElementById("btn");
+        btn.textContent = "Réservation en cours";
+        btn.setAttribute("disabled", "disabled");
+
+        const progress = document.getElementById("progress");
+        const color = document.getElementById("color");
+        progress.style.display = "block";
+
+        const interval = setInterval(() => {
+          if (width < 100) {
+            width += 20;
+            color.style.width = width + "%";
+            progress.setAttribute("aria-valuenow", width);
+
+            if (width > 40 && width < 70) color.style.background = "orange";
+            if (width >= 70) color.style.background = "green";
+          } else {
+            clearInterval(interval);
+            progress.style.display = "none";
+            done();
+          }
+        }, 2000);
+      }
+
+      function done() {
+        const ok = document.createElement("p");
+        ok.textContent = "Votre réservation à bien été prise en compte";
+        ok.setAttribute("role", "status");
+        ok.setAttribute("aria-live", "polite");
+        document.querySelector("#form").appendChild(ok);
+
+        setTimeout(() => {
+          document.querySelector("#form").removeChild(ok);
+        }, 3000);
+      }
+    </script>
+  </body>
+</html>

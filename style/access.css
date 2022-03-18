@@ -1,0 +1,21 @@
+.my-sr-only {
+  position: absolute;
+  left: -5000px;
+}
+
+a.my-sr-only:focus {
+  left: 0;
+  border: solid 2px;
+  padding: 20px;
+}
+
+.nav-evit {
+  height: 60px;
+  box-shadow: 2px 4px 7px grey;
+}
+
+.ul-evit {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
