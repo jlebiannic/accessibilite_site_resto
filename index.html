@@ -17,7 +17,7 @@
 
     <title>La ch'tite cuisine : Accueil</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="../script.js"></script>
+    <script src="scripts/script.js"></script>
     <script src="scripts/accesibility.js"></script>
   </head>
 
@@ -36,21 +36,40 @@
           <a class="nav-item" href="index.html">Accueil</a>
         </li>
         <li>
-          <div id="access_btn" tabindex="0"  class="nav-item">Accessibilité
-            <span aria-hidden="true" class="material-icons">keyboard_arrow_down</span>
+          <div id="access_btn" tabindex="0" class="nav-item">
+            Accessibilité
+            <span aria-hidden="true" class="material-icons"
+              >keyboard_arrow_down</span
+            >
             <div id="access_dial" role="dialog" class="alert">
-              <div><span id="s_name">Sombre</span> <button aria-label="Mode Sombre : désactivé" id="dark" onclick="darkMode()" class="toggle"><span aria-hidden="true" class="round"></span></button></div>
-              <div class="font">Police
-                <span>
-                            <button onclick="zoom(0.5)">
-                                <span class="material-icons">add</span>
-                            </button>
-                            <button onclick="zoom(-0.5)">
-                                <span class="material-icons">remove</span>
-                            </button>
-                        </span>
+              <div>
+                <span id="s_name">Sombre</span>
+                <button
+                  aria-label="Mode Sombre : désactivé"
+                  id="dark"
+                  onclick="darkMode()"
+                  class="toggle"
+                >
+                  <span aria-hidden="true" class="round"></span>
+                </button>
               </div>
-              <div>Dyslexie <button id="dys" onclick="" class="toggle"><span class="round"></span></button></div>
+              <div class="font">
+                Police
+                <span>
+                  <button onclick="zoom(0.5)">
+                    <span class="material-icons">add</span>
+                  </button>
+                  <button onclick="zoom(-0.5)">
+                    <span class="material-icons">remove</span>
+                  </button>
+                </span>
+              </div>
+              <div>
+                Dyslexie
+                <button id="dys" onclick="" class="toggle">
+                  <span class="round"></span>
+                </button>
+              </div>
             </div>
           </div>
         </li>
@@ -121,149 +140,144 @@
       </section>
 
       <section id="menu" class="centered card flex-between">
-          <div class="text">
-            <h2>
-              <span class="material-icons" aria-hidden="true"
-                >local_dining</span
-              >
-              Le Menu
-              <span class="material-icons" aria-hidden="true"
-                >local_dining</span
-              >
-            </h2>
+        <div class="text">
+          <h2>
+            <span class="material-icons" aria-hidden="true">local_dining</span>
+            Le Menu
+            <span class="material-icons" aria-hidden="true">local_dining</span>
+          </h2>
 
-            <h3 id="starter">Les Entrées</h3>
-            <ul>
-              <li class="menu_item li">
-                <strong id="cass_titre">Cassolettes de la mer </strong>
-                <span id="cass_desc"
-                  >Poisson selon arrivage, crevettes, petits légumes</span
-                >
-                <span id="cass_price">9€</span>
-              </li>
-              <li class="menu_item li">
-                <strong>Mini Potjevleesch</strong>
-                <span>Terrine de trois viandes</span>
-                <span>10€</span>
-              </li>
-              <li class="menu_item li">
-                <strong>Toast de saumon fumé</strong>
-                <span id="saum_desc">Fumé sur place</span>
-                <span id="saum_price">10€</span>
-              </li>
-            </ul>
-            <h3 id="plats">Les Plats</h3>
-            <ul>
-              <li class="menu_item li">
-                <strong>Welsh Rarebit</strong>
-                <span>Cheddar Galloway, jambon blanc, pain de campagne</span>
-                <span>14€</span>
-              </li>
-              <li class="menu_item li">
-                <strong>Salade d'Opale</strong>
-                <span>Saumon fumé sur place, salade de légumes de saison</span>
-                <span>14€</span>
-              </li>
-              <li class="menu_item li">
-                <strong>Carbonnade Flamande</strong>
-                <span>Joue de boeuf, sauce à la bière régionale</span>
-                <span>15€</span>
-              </li>
-            </ul>
-            <div id="desserts">Les Desserts</div>
-            <ul>
-              <li class="menu_item li">
-                <strong>Crème brûlée à la Chicorée</strong>
-                <span>Brûlée sous vos yeux</span>
-                <span>6€</span>
-              </li>
-              <li class="menu_item li">
-                <strong>Tarte au Libouli</strong>
-                <span>Recette de Grand Mère</span>
-                <span>6€</span>
-              </li>
-              <li class="menu_item li">
-                <strong>Assiette de fromages locaux</strong>
-                <span>Fleur d'Audresselle, Ecume de Wimereux, Mimolette</span>
-                <span>9€</span>
-              </li>
-            </ul>
-          </div>
-          <div class="img">
-            <img
-              src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80"
-              alt="Photo de la salade d'Opale"
-            />
-          </div>
+          <h3 id="starter">Les Entrées</h3>
+          <ul>
+            <li class="menu_item li">
+              <strong id="cass_titre">Cassolettes de la mer </strong>
+              <span id="cass_desc"
+                >Poisson selon arrivage, crevettes, petits légumes</span
+              >
+              <span id="cass_price">9€</span>
+            </li>
+            <li class="menu_item li">
+              <strong>Mini Potjevleesch</strong>
+              <span>Terrine de trois viandes</span>
+              <span>10€</span>
+            </li>
+            <li class="menu_item li">
+              <strong>Toast de saumon fumé</strong>
+              <span id="saum_desc">Fumé sur place</span>
+              <span id="saum_price">10€</span>
+            </li>
+          </ul>
+          <h3 id="plats">Les Plats</h3>
+          <ul>
+            <li class="menu_item li">
+              <strong>Welsh Rarebit</strong>
+              <span>Cheddar Galloway, jambon blanc, pain de campagne</span>
+              <span>14€</span>
+            </li>
+            <li class="menu_item li">
+              <strong>Salade d'Opale</strong>
+              <span>Saumon fumé sur place, salade de légumes de saison</span>
+              <span>14€</span>
+            </li>
+            <li class="menu_item li">
+              <strong>Carbonnade Flamande</strong>
+              <span>Joue de boeuf, sauce à la bière régionale</span>
+              <span>15€</span>
+            </li>
+          </ul>
+          <div id="desserts">Les Desserts</div>
+          <ul>
+            <li class="menu_item li">
+              <strong>Crème brûlée à la Chicorée</strong>
+              <span>Brûlée sous vos yeux</span>
+              <span>6€</span>
+            </li>
+            <li class="menu_item li">
+              <strong>Tarte au Libouli</strong>
+              <span>Recette de Grand Mère</span>
+              <span>6€</span>
+            </li>
+            <li class="menu_item li">
+              <strong>Assiette de fromages locaux</strong>
+              <span>Fleur d'Audresselle, Ecume de Wimereux, Mimolette</span>
+              <span>9€</span>
+            </li>
+          </ul>
+        </div>
+        <div class="img">
+          <img
+            src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80"
+            alt="Photo de la salade d'Opale"
+          />
+        </div>
       </section>
       <section id="bieres" class="centered card flex-between">
-          <div class="text">
-            <h2>La beuverie</h2>
-            <h3 id="blondes">Blondes</h3>
-            <ul>
-              <li>
-                <span class="material-icons" aria-hidden="true">
-                  sports_bar
-                </span>
-                La 2 Caps
-              </li>
-              <li>
-                <span class="material-icons" aria-hidden="true">
-                  sports_bar
-                </span>
-                La Belle Dalle
-              </li>
-              <li>
-                <span class="material-icons" aria-hidden="true">
-                  sports_bar
-                </span>
-                Chouffe
-              </li>
-            </ul>
-            <h3 id="brunes">Brunes</h3>
-            <ul>
-              <li>
-                <span class="material-icons" aria-hidden="true">
-                  sports_bar
-                </span>
-                D-Day
-              </li>
-              <li>
-                <span class="material-icons" aria-hidden="true">
-                  sports_bar
-                </span>
-                O' Guenel
-              </li>
-              <li>
-                <span class="material-icons" aria-hidden="true">
-                  sports_bar
-                </span>
-                Noir de Slack
-              </li>
-            </ul>
-            <h3 id="blanches">Les Blanches</h3>
-            <ul>
-              <li>
-                <span class="material-icons" aria-hidden="true">
-                  sports_bar
-                </span>
-                Blanche de Wissant
-              </li>
-              <li>
-                <span class="material-icons" aria-hidden="true">
-                  sports_bar
-                </span>
-                Hoegarden Rosée
-              </li>
-            </ul>
-          </div>
-          <div class="img">
-            <img
-              src="https://www.destinationcocktails.fr/wp-content/uploads/2020/12/histoire-de-la-biere-et-du-.jpg"
-              alt="Photo de la bière Les 2 Caps"
-            />
-          </div>
-
+        <div class="text">
+          <h2>La beuverie</h2>
+          <h3 id="blondes">Blondes</h3>
+          <ul>
+            <li>
+              <span class="material-icons" aria-hidden="true">
+                sports_bar
+              </span>
+              La 2 Caps
+            </li>
+            <li>
+              <span class="material-icons" aria-hidden="true">
+                sports_bar
+              </span>
+              La Belle Dalle
+            </li>
+            <li>
+              <span class="material-icons" aria-hidden="true">
+                sports_bar
+              </span>
+              Chouffe
+            </li>
+          </ul>
+          <h3 id="brunes">Brunes</h3>
+          <ul>
+            <li>
+              <span class="material-icons" aria-hidden="true">
+                sports_bar
+              </span>
+              D-Day
+            </li>
+            <li>
+              <span class="material-icons" aria-hidden="true">
+                sports_bar
+              </span>
+              O' Guenel
+            </li>
+            <li>
+              <span class="material-icons" aria-hidden="true">
+                sports_bar
+              </span>
+              Noir de Slack
+            </li>
+          </ul>
+          <h3 id="blanches">Les Blanches</h3>
+          <ul>
+            <li>
+              <span class="material-icons" aria-hidden="true">
+                sports_bar
+              </span>
+              Blanche de Wissant
+            </li>
+            <li>
+              <span class="material-icons" aria-hidden="true">
+                sports_bar
+              </span>
+              Hoegarden Rosée
+            </li>
+          </ul>
+        </div>
+        <div class="img">
+          <img
+            src="https://www.destinationcocktails.fr/wp-content/uploads/2020/12/histoire-de-la-biere-et-du-.jpg"
+            alt="Photo de la bière Les 2 Caps"
+          />
+        </div>
       </section>
     </main>
 
@@ -274,9 +288,7 @@
         <div>
           <h3>Nous contacter</h3>
           <ul>
-            <li>
-              Adresse: 23 rue des Pingouins, Wissant
-            </li>
+            <li>Adresse: 23 rue des Pingouins, Wissant</li>
             <li>Téléphone: 03 21 10 10 10</li>
             <li>Email: lachtitecuisine@gmail.com</li>
           </ul>
@@ -287,7 +299,7 @@
             <iframe
               aria-label="Carte du restaurant issue de Google Map. Le restaurant est situé 23 rue des Pingouins, à Wissant."
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2517.1697478106535!2d1.6524638159349816!3d50.883568563942205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dc24e7af4970b3%3A0x9bd65f3c4c9796fe!2s23%20Rue%20des%20Pingouins%2C%2062179%20Wissant!5e0!3m2!1sfr!2sfr!4v1632320485837!5m2!1sfr!2sfr"
-              style="border: 0;"
+              style="border: 0"
               allowfullscreen=""
               loading="lazy"
             ></iframe>
